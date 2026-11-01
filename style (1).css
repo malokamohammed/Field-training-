@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+:root {
+    --main-color: #163b70;
+    --second-color: #3478c0;
+}
+nav {
+    background-color: var(--main-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2 {
+    color: white;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover {
+    color: lightblue;
+}
+.hero {
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.hero-content {
+    animation: fadeIn 2s;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.hero p {
+  margin-bottom: 25px;
+}
+.hero-button a {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px;
+  background-color: var(--second-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  
+}
+.hero-button a:hover {
+    background-color: var(--main-color);
+}
+.activities {
+    padding: 40px 20px;
+    text-align: center;
+}
+.activities h2 {
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+.section-text {
+    margin-bottom: 30px;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ccc;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+
+.blog {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.blog h1 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article h2 {
+    color: var(--main-color);
+    margin: 15px 0;
+}
+
+.article p {
+    margin-bottom: 15px;
+}
+
+.article a {
+    display: inline-block;
+    background-color: var(--second-color);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.article a:hover {
+    background-color: var(--main-color);
+}
+@media (max-width: 768px) {
+
+    .articles {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width: 992px) {
+
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+.login {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login form {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.login h1 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.login label {
+    display: block;
+    margin-top: 15px;
+}
+
+.login input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: var(--main-color);
+}
+
+.login input:focus {
+    outline: 2px solid var(--second-color);
+}
+
+.login p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login a {
+    color: var(--second-color);
+}
+}
+
+.registration {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.registration form {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.registration h1 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.registration label {
+    display: block;
+    margin-top: 12px;
+}
+
+.registration input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration button:hover {
+    background-color: var(--main-color);
+}
+
+.registration input:focus {
+    outline: 2px solid var(--second-color);
+}
+
+.registration p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.registration a {
+    color: var(--second-color);
+}
+
+
+.booking {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.booking form {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.booking h1 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.booking label {
+    display: block;
+    margin-top: 12px;
+}
+
+.booking input,
+.booking select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background-color: var(--main-color);
+}
+
+.booking input:focus,
+.booking select:focus {
+    outline: 2px solid var(--second-color);
+}
+
+
+.contact {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact form {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.contact h1 {
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.contact label {
+    display: block;
+    margin-top: 12px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: var(--main-color);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 2px solid var(--second-color);
+}
+
+
+
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h1 {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.about > p {
+    margin-bottom: 30px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    background-color: white;
+    width: 250px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.member h3 {
+    color: var(--main-color);
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .member {
+        width: 100%;
+        max-width: 350px;
+    }
+}
